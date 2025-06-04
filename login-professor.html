@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Professor - EduChat+</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 120px auto 40px;
+            padding: 2rem;
+            background: var(--card-background);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: var(--text-secondary);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            color: var(--text-color);
+        }
+
+        .form-group input {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .btn-login {
+            background: var(--primary-color);
+            color: var(--background-color);
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .login-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-home {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: var(--card-background);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-to-home:hover {
+            background: var(--primary-color);
+            transform: translateX(-5px);
+        }
+
+        .back-to-home i {
+            color: var(--text-color);
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                margin: 100px 20px 40px;
+            }
+
+            .back-to-home {
+                top: auto;
+                bottom: 20px;
+                left: 20px;
+                background: var(--primary-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>EduChat+</h1>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="login-header">
+                <h1>Área do Professor</h1>
+                <p>Faça login para acessar sua área</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Esqueceu sua senha? <a href="#">Recuperar senha</a></p>
+                <p>Não é professor? <a href="login.html">Fazer login como aluno</a></p>
+            </div>
+        </div>
+    </main>
+
+    <a href="index.html" class="back-to-home" title="Voltar para a página inicial">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>EduChat+</h3>
+                <p>Transformando o futuro da educação através da tecnologia e inovação.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/educhatmaisoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/educhatpagina/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> contato@educhat.com</p>
+                    <p><i class="fas fa-phone"></i> (xx) xxxx-xxxx</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Salvador,BA</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <div class="contact-info">
+                    <p><a href="sobre.html">Sobre Nós</a></p>
+                    <p><a href="privacidade.html">Política de Privacidade</a></p>
+                    <p><a href="termos.html">Termos de Uso</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EduChat+. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Aqui você implementaria a lógica de autenticação
+            // Por enquanto, vamos apenas redirecionar para a área do professor
+            window.location.href = 'professor.html';
+        });
+    </script>
+</body>
+</html> 
