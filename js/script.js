@@ -1,3 +1,38 @@
+// Theme Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Verifica se há uma preferência salva
+    const savedTheme = localStorage.getItem('theme');
+    
+    // Aplica o tema salvo ou o tema do sistema
+    if (savedTheme) {
+        document.body.dataset.theme = savedTheme;
+        updateThemeIcon(savedTheme);
+    } else if (prefersDarkScheme.matches) {
+        document.body.dataset.theme = 'dark';
+        updateThemeIcon('dark');
+    }
+    
+    // Adiciona o evento de clique no botão de tema
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.body.dataset.theme;
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.body.dataset.theme = newTheme;
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+    
+    // Atualiza o ícone do tema
+    function updateThemeIcon(theme) {
+        const icon = themeToggle.querySelector('i');
+        icon.classList.remove('fa-moon', 'fa-sun');
+        icon.classList.add(theme === 'dark' ? 'fa-sun' : 'fa-moon');
+    }
+});
+
 // Dados dos cursos organizados por trilhas
 const courseData = {
     trilhas: [

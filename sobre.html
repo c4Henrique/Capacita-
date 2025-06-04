@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - EduChat+</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sobre Nós - Capacita+</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .about-content {
@@ -29,54 +29,58 @@
 
         .about-content p {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            text-align: justify;
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
-        .mission-values {
+        .mission-vision {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
-        .value-card {
+        .mission-vision div {
             background: rgba(255, 255, 255, 0.05);
             padding: 1.5rem;
             border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s ease;
         }
 
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .value-card i {
+        .mission-vision i {
             font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .value-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
 
-        .value-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin: 0;
+        .values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
-        .team-section {
-            margin-top: 3rem;
+        .value-item {
             text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
         }
 
-        .team-section p {
-            text-align: center;
+        .value-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .values {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -84,7 +88,7 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>EduChat+</h1>
+                <h1>Capacita+</h1>
             </div>
             <div class="theme-toggle">
                 <button id="themeToggle">
@@ -99,60 +103,80 @@
 
     <main>
         <div class="about-content">
-            <h1>Sobre o EduChat+</h1>
+            <h1>Sobre o Capacita+</h1>
 
-            <p>O EduChat+ é uma iniciativa educacional inovadora que nasce na Bahia com a missão de reinventar o ensino e a aprendizagem por meio da tecnologia com propósito. Somos mais do que uma plataforma: somos um movimento que une realidade aumentada, gamificação, metodologias ativas e a abordagem STEAM (Ciência, Tecnologia, Engenharia, Artes e Matemática) para transformar conteúdos escolares em experiências interativas e significativas.</p>
+            <p>O Capacita+ nasceu da necessidade de democratizar o acesso a cursos de qualidade na área de eletricidade. Nossa plataforma foi desenvolvida por profissionais experientes do setor elétrico, com o objetivo de capacitar e formar novos profissionais através de uma metodologia prática e atualizada.</p>
 
-            <p>Nosso foco está em estudantes do ensino fundamental e médio, especialmente em comunidades onde o acesso à educação de qualidade ainda é um desafio. Atuamos com um compromisso firme: educar com inovação, sem deixar ninguém para trás.</p>
-
-            <div class="mission-values">
-                <div class="value-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Inovação</h3>
-                    <p>Unimos tecnologia e educação para criar experiências de aprendizado únicas e transformadoras.</p>
+            <div class="mission-vision">
+                <div>
+                    <i class="fas fa-bullseye"></i>
+                    <h2>Nossa Missão</h2>
+                    <p>Formar profissionais qualificados em eletricidade, fornecendo conhecimento técnico atualizado e prático, contribuindo para o desenvolvimento do setor elétrico brasileiro.</p>
                 </div>
-                <div class="value-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Inclusão</h3>
-                    <p>Comprometidos em levar educação de qualidade para todas as comunidades.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Colaboração</h3>
-                    <p>Construímos soluções através da escuta ativa de professores e alunos.</p>
+                <div>
+                    <i class="fas fa-eye"></i>
+                    <h2>Nossa Visão</h2>
+                    <p>Ser a principal referência em educação online para cursos de eletricidade, reconhecida pela excelência no ensino e pela qualidade dos profissionais formados.</p>
                 </div>
             </div>
 
-            <p>Por trás do EduChat+ está um time que acredita na educação como ferramenta de transformação social. Cada funcionalidade nasce da escuta ativa de professores e alunos, com o objetivo de tornar a escola um espaço de criatividade, protagonismo e solução de problemas reais.</p>
-
-            <div class="team-section">
-                <h2>Nossa Origem</h2>
-                <p>Acreditamos que a inovação pode surgir de qualquer lugar — e a Bahia, com sua identidade e potência cultural, é o berço ideal para esse novo capítulo da educação no Brasil.</p>
+            <h2>Por que escolher o Capacita+?</h2>
+            <div class="values">
+                <div class="value-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Expertise</h3>
+                    <p>Professores com vasta experiência no mercado de trabalho e formação acadêmica sólida.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-book"></i>
+                    <h3>Conteúdo Atualizado</h3>
+                    <p>Material didático constantemente revisado e atualizado conforme as normas técnicas vigentes.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Metodologia Prática</h3>
+                    <p>Aulas com exemplos reais e exercícios práticos para melhor fixação do conteúdo.</p>
+                </div>
             </div>
 
-            <p>Juntos, estamos construindo uma educação mais inclusiva, criativa e conectada com o futuro.</p>
+            <h2>Nossos Diferenciais</h2>
+            <ul>
+                <li>Cursos desenvolvidos por profissionais atuantes no mercado</li>
+                <li>Material didático exclusivo e atualizado</li>
+                <li>Suporte técnico especializado</li>
+                <li>Certificação reconhecida pelo mercado</li>
+                <li>Flexibilidade de horários</li>
+                <li>Acesso vitalício ao conteúdo</li>
+                <li>Atualizações gratuitas do material</li>
+            </ul>
+
+            <h2>Nossa Equipe</h2>
+            <p>Nossa equipe é composta por profissionais altamente qualificados, com vasta experiência no setor elétrico. Nossos instrutores são engenheiros eletricistas, técnicos em eletricidade e profissionais especializados, todos com anos de experiência prática e didática.</p>
+
+            <h2>Compromisso com a Qualidade</h2>
+            <p>No Capacita+, a qualidade do ensino é nossa prioridade. Todos os nossos cursos são desenvolvidos seguindo as normas técnicas vigentes e as melhores práticas do mercado. Nosso objetivo é formar profissionais competentes e preparados para os desafios do mercado de trabalho.</p>
         </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>EduChat+</h3>
+                <h3>Capacita+</h3>
                 <p>Transformando o futuro da educação através da tecnologia e inovação.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/educhatmaisoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/educhatpagina/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-section">
                 <h3>Contato</h3>
                 <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> contato@educhat.com</p>
+                    <p><i class="fas fa-envelope"></i> contato@capacita.com</p>
                     <p><i class="fas fa-phone"></i> (xx) xxxx-xxxx</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Salvador, BA</p>
+                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
                 </div>
             </div>
             <div class="footer-section">
@@ -166,10 +190,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 EduChat+. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Capacita+. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html> 
