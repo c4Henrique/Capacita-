@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - EduChat+</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h1>Criar Conta</h1>
+            <form>
+                <div class="form-row">
+                    <div>
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+                    </div>
+                    <div>
+                        <label for="lastname">Sobrenome</label>
+                        <input type="text" id="lastname" name="lastname" required placeholder="Digite seu sobrenome">
+                    </div>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required placeholder="Digite sua senha" minlength="8">
+                </div>
+                <div>
+                    <label for="confirm-password">Confirmar Senha</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirme sua senha" minlength="8">
+                </div>
+                <button type="submit" class="btn-signup">Criar Conta</button>
+            </form>
+            <p class="login-link">Já tem uma conta? <a href="login.html">Fazer Login</a></p>
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar para o início</a>
+        </div>
+    </div>
+</body>
+</html> 
